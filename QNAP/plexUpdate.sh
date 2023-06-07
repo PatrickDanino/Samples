@@ -28,9 +28,11 @@ PLEX_UPDATE_URL=https://plex.tv/api/downloads/5.json
 LOG_FILE=${PLEX_UPDATE_FOLDER}/PlexUpdate.log
 
 # Script start
-rm -rf ${PLEX_UPDATE_DOWNLOAD_FOLDER}
-mkdir -m 777 ${PLEX_UPDATE_DOWNLOAD_FOLDER}
 echo "$(date) - Plex Update" > ${LOG_FILE}
+
+echo -e "\nClearing Download folder..." >> ${LOG_FILE}
+rm -rf ${PLEX_UPDATE_DOWNLOAD_FOLDER} >> ${LOG_FILE}
+mkdir -m 777 ${PLEX_UPDATE_DOWNLOAD_FOLDER} >> ${LOG_FILE}
 
 # Check Plex QPKG installation status
 echo -e "\nChecking for Plex QPKG..." >> ${LOG_FILE}
