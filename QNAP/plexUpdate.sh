@@ -3,9 +3,10 @@
 # -- Instructions --
 #
 # Update the "PLEX_BUILD" architecture below as needed
-# Copy this script to /etc/init.d using sudo
-# Enable script execution using chmod +x /etc/init.d/plexUpdate.sh
-# Add an entry to crontab to run daily using QNAP wiki instructions at https://wiki.qnap.com/wiki/Add_items_to_crontab
+# Create the directory: mkdir /share/CE_CACHEDEV1_DATA/PlexUpdate && cd /share/CE_CACHEDEV1_DATA/PlexUpdate
+# Download the script: sudo wget https://raw.githubusercontent.com/PatrickDanino/Samples/main/QNAP/plexUpdate.sh
+# Enable script execution: sudo chmod +x plexUpdate.sh
+# Add an entry to crontab to run daily using QNAP wiki instructions: https://wiki.qnap.com/wiki/Add_items_to_crontab
 #
 
 # Update the build architecture below as needed.
