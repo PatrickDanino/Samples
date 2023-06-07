@@ -20,19 +20,20 @@
 PLEX_BUILD=linux-x86_64
 
 PLEX_UPDATE_FOLDER=/share/CE_CACHEDEV1_DATA/PlexUpdate
-PLEX_UPDATE_FILE=${PLEX_UPDATE_FOLDER}/plex.json
-PLEX_UPDATE_PACKAGE_FILE=${PLEX_UPDATE_FOLDER}/PlexMediaServer.qpkg
+PLEX_UPDATE_DOWNLOAD_FOLDER=${PLEX_UPDATE_FOLDER}/Download
+PLEX_UPDATE_FILE=${PLEX_UPDATE_DOWNLOAD_FOLDER}/plex.json
+PLEX_UPDATE_PACKAGE_FILE=${PLEX_UPDATE_DOWNLOAD_FOLDER}/PlexMediaServer.qpkg
 PLEX_UPDATE_URL=https://plex.tv/api/downloads/5.json
 
 LOG_FILE=${PLEX_UPDATE_FOLDER}/PlexUpdate.log
 
 # Script start
-rm -rf ${PLEX_UPDATE_FOLDER}
-mkdir -m 777 ${PLEX_UPDATE_FOLDER}
+rm -rf ${PLEX_UPDATE_DOWNLOAD_FOLDER}
+mkdir -m 777 ${PLEX_UPDATE_DOWNLOAD_FOLDER}
 echo "$(date) - Plex Update" > ${LOG_FILE}
 
-# Check status
-echo -e "\nChecking PlexMediaServer status..." >> ${LOG_FILE}
+# Check Plex QPKG installation status
+echo -e "\nChecking for Plex QPKG..." >> ${LOG_FILE}
 
 PLEX_FOLDER=$(readlink -f /etc/init.d/plex.sh)
 PLEX_FOLDER=$(echo ${PLEX_FOLDER/\/plex.sh})
