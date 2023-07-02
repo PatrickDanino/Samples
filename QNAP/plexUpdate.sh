@@ -26,6 +26,7 @@ PLEX_UPDATE_PACKAGE_FILE=${PLEX_UPDATE_DOWNLOAD_FOLDER}/PlexMediaServer.qpkg
 PLEX_UPDATE_URL=https://plex.tv/api/downloads/5.json
 
 LOG_FILE=${PLEX_UPDATE_FOLDER}/PlexUpdate.log
+LOG_UPDATE_FILE=${PLEX_UPDATE_FOLDER}/PlexUpdateVersion.log
 
 # Script start
 echo "$(date) - Plex Update" > ${LOG_FILE}
@@ -87,6 +88,9 @@ if ! [[ ${PLEX_UPDATE_PACKAGE_VERSION} == ${PLEX_PACKAGE_VERSION} ]]; then
     echo -e "\nInstalling package..." >> ${LOG_FILE}
     sh ${PLEX_UPDATE_PACKAGE_FILE} >> ${LOG_FILE}
  
+    echo -e "${PLEX_UPDATE_PACKAGE_VERSION}" > ${LOG_UPDATE_FILE}
+    echo -e "$(date)" >> ${LOG_UPDATE_FILE}
+    
   else
     echo -e "\tDownloading of update packaged failed" >> ${LOG_FILE}
   fi
