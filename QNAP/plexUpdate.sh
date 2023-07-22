@@ -30,7 +30,7 @@ LOG_FILE=${LOG_FOLDER}/PlexUpdate.log
 LOG_UPDATE_FILE=${LOG_FOLDER}/PlexUpdateVersion.log
 
 # Script start
-mkdir -m 777 ${LOG_FOLDER}
+mkdir -p -m 777 ${LOG_FOLDER}
 echo "$(date) - Plex Update" > ${LOG_FILE}
 
 echo -e "\nClearing Download folder..." >> ${LOG_FILE}
