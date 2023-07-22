@@ -2,11 +2,12 @@
 
 # -- Instructions --
 #
-# Update the "PLEX_BUILD" architecture below as needed
-# Create the directory: mkdir /share/CE_CACHEDEV1_DATA/PlexUpdate && cd /share/CE_CACHEDEV1_DATA/PlexUpdate
-# Download the script: sudo wget https://raw.githubusercontent.com/PatrickDanino/Samples/main/QNAP/plexUpdate.sh
-# Enable script execution: sudo chmod +x plexUpdate.sh
-# Add an entry to crontab to run daily using QNAP wiki instructions: https://wiki.qnap.com/wiki/Add_items_to_crontab
+# 1. Update the "PLEX_BUILD" architecture below as needed
+# 2. Create the "PLEX_UPDATE_FOLDER" directory: mkdir -m 777 /share/CE_CACHEDEV1_DATA/PlexUpdate && cd /share/CE_CACHEDEV1_DATA/PlexUpdate
+# 3. Download the script: sudo wget https://raw.githubusercontent.com/PatrickDanino/Samples/main/QNAP/plexUpdate.sh
+# 4. Enable script execution: sudo chmod +x plexUpdate.sh
+# 5. Add an entry to crontab to run /share/CE_CACHEDEV1_DATA/PlexUpdate/plexUpdate.sh
+#    daily using QNAP wiki instructions: https://wiki.qnap.com/wiki/Add_items_to_crontab
 #
 
 # Update the build architecture below as needed.
