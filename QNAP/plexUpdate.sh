@@ -19,7 +19,11 @@
 #     linux-armv7neon (ARMv7 TS-x31+, TS-x31P, TS-x31P2, TS-x31X, and TS-x31XU Series)
 PLEX_BUILD=linux-x86_64
 
+# You can store this script in the folder below.
+# The folder can be changed so long as it is a valid location with > 300MB of space in order to download the Plex QPKG
+# Note that /tmp and many other folders have strict quota limits or get cleared when rebooting
 PLEX_UPDATE_FOLDER=/share/CE_CACHEDEV1_DATA/PlexUpdate
+
 PLEX_UPDATE_DOWNLOAD_FOLDER=${PLEX_UPDATE_FOLDER}/Download
 PLEX_UPDATE_FILE=${PLEX_UPDATE_DOWNLOAD_FOLDER}/plex.json
 PLEX_UPDATE_PACKAGE_FILE=${PLEX_UPDATE_DOWNLOAD_FOLDER}/PlexMediaServer.qpkg
