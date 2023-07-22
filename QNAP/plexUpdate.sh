@@ -21,7 +21,7 @@
 PLEX_BUILD=linux-x86_64
 
 # You can store this script in the folder below.
-# The folder can be changed so long as it is a valid location with > 300MB of space in order to download the Plex QPKG
+# The folder path can be changed so long as it is a valid location with > 300MB of space in order to download the Plex QPKG
 # Note that /tmp and many other folders have strict quota limits or get cleared when rebooting
 PLEX_UPDATE_FOLDER=/share/CE_CACHEDEV1_DATA/PlexUpdate
 
