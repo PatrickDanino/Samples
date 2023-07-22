@@ -25,10 +25,12 @@ PLEX_UPDATE_FILE=${PLEX_UPDATE_DOWNLOAD_FOLDER}/plex.json
 PLEX_UPDATE_PACKAGE_FILE=${PLEX_UPDATE_DOWNLOAD_FOLDER}/PlexMediaServer.qpkg
 PLEX_UPDATE_URL=https://plex.tv/api/downloads/5.json
 
-LOG_FILE=${PLEX_UPDATE_FOLDER}/PlexUpdate.log
-LOG_UPDATE_FILE=${PLEX_UPDATE_FOLDER}/PlexUpdateVersion.log
+LOG_FOLDER=${PLEX_UPDATE_FOLDER}/Logs
+LOG_FILE=${LOG_FOLDER}/PlexUpdate.log
+LOG_UPDATE_FILE=${LOG_FOLDER}/PlexUpdateVersion.log
 
 # Script start
+mkdir -m 777 ${LOG_FOLDER}
 echo "$(date) - Plex Update" > ${LOG_FILE}
 
 echo -e "\nClearing Download folder..." >> ${LOG_FILE}
